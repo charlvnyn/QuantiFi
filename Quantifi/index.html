@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>QuantiFi | Data Usage</title>
+    <link rel="stylesheet" href="chartist/dist/chartist.min.css">
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <style type="text/css">
+        .num {position: absolute;
+    top: 35%;
+    width: 100%;}
+.cont {position: relative;}
+
+    </style>
+</head>
+
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <a class='dropdown-button btn-large light-blue lighten-1 click-to-toggle' href='#' data-activates='dropdown_main' data-beloworigin="true" data-constrainwidth="false">Overview</a>
+        <!--<a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>button</a>-->
+        <!-- <div class="nav-wrapper container"> 
+      <a id="logo-container" href="#" class="brand-logo">Data Usage</a>
+      
+    </div>-->
+        <ul id='dropdown_main' class='dropdown-content' style="overflow-x: hidden; width:240px;">
+            <li>
+                <div class="row" style="padding-bottom:20px;">
+                    <div class="col s12 m6">
+                        <h4>General</h4>
+                        <p>Current usage data: 55gb</p>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <h4>Devices</h4>
+                        <div class="divider"></div>
+                        <div class="section">
+                            <h7>Device 1:20gb</h7>
+                            <p class="grey-text">AB:3E:44:1A:45:1A</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="section">
+                            <h7>Device 1:5gb</h7>
+                            <p class="grey-text">AB:3E:44:1A:45:1A</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="section">
+                            <h7>Device 1:1gb</h7>
+                            <p class="grey-text">AB:3E:44:1A:45:1A</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="section">
+                            <h7>Device 1</h7>
+                            <p class="grey-text">AB:3E:44:1A:45:1A</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+            <li><a href="#!">More Details</a></li>
+        </ul>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br>
+            <span class="header center orange-text" style="font-size:30px;"><i class="small center material-icons">swap_vert</i>Data usage</span>
+            <span class="waves-effect waves-light orange right z-depth-1" style="padding:5px;border-radius:3px;">30/50GB</span>
+            <div class="row center">
+                <div class="section">
+                    <!--   Icon Section   -->
+                    <div class="row">
+                        <div class="col s12 m4">
+                            <div class="icon-block">
+                                <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+                                <h6 class="center grey-text">Current Total Usage</h6>
+                                <div class="ct-chart ct-golden-section" id="chart1"></div>
+                            </div>
+                        </div>
+                        <div class="col s12 m4">
+                            <div class="icon-block">
+                                <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+                                <h6 class="center grey-text">Frequency of Usage</h6>
+                                <div class="ct-chart ct-golden-section" id="chart2"></div>
+                            </div>
+                        </div>
+                        <div class="col s12 m4">
+                            <div class="icon-block cont">
+                                <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+                                <h6 class="center grey-text">Most Devices present</h6>
+                                <br>
+                                <br>
+                                <div class="ct-chart ct-golden-section" id="chart3"></div>
+                                <div class="num">45.3 KB</div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="container">
+            </div>
+            <br>
+            <br>
+            <div class="section">
+            </div>
+        </div>
+        <footer class="page-footer orange">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Company Bio</h5>
+                        <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">Settings</h5>
+                        <ul>
+                            <li><a class="white-text" href="#!">Link 1</a></li>
+                            <li><a class="white-text" href="#!">Link 2</a></li>
+                            <li><a class="white-text" href="#!">Link 3</a></li>
+                            <li><a class="white-text" href="#!">Link 4</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">Connect</h5>
+                        <ul>
+                            <li><a class="white-text" href="#!">Link 1</a></li>
+                            <li><a class="white-text" href="#!">Link 2</a></li>
+                            <li><a class="white-text" href="#!">Link 3</a></li>
+                            <li><a class="white-text" href="#!">Link 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+                </div>
+            </div>
+        </footer>
+        <!--  Scripts-->
+        <script src="chartist/dist/chartist.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/materialize.js"></script>
+</body>
+
+</html>
